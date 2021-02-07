@@ -19,9 +19,9 @@ class TestCubeVolume(unittest.TestCase):
 		self.assertEqual(cube_volume.volume(-1,2,3), "At least one of your inputs was invalid.")
 		self.assertEqual(cube_volume.volume(2,-1,3), "At least one of your inputs was invalid.")
 		self.assertEqual(cube_volume.volume(3,2,-1), "At least one of your inputs was invalid.")
-		self.assertEqual(cube_volume.volume(3,-2,-1), "At least one of your inputs was invalid.")
-		self.assertEqual(cube_volume.volume(-3,2,-1), "At least one of your inputs was invalid.")
-		self.assertEqual(cube_volume.volume(-3,-2,-1), "At least one of your inputs was invalid.")
+		self.assertEqual(cube_volume.volume(3,-2,"1c"), "At least one of your inputs was invalid.")
+		self.assertEqual(cube_volume.volume("3a","2b",-1), "At least one of your inputs was invalid.")
+		self.assertEqual(cube_volume.volume("Bad input",-2,-1), "At least one of your inputs was invalid.")
 		self.assertEqual(cube_volume.volume(3,2,"Bad input"), "At least one of your inputs was invalid.")
 
 if __name__ == '__main__':
